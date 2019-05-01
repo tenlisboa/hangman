@@ -32,6 +32,13 @@ class Hangman
             print "Choice a character: "
             char = gets.chomp
 
+            unless validate_size(char, 1)
+                system('clear')
+                puts "Your need provide just a single charactere"
+                sleep 2
+                next
+            end
+
             choice = choice_character(char)
 
             unless choice[:right]
@@ -50,6 +57,7 @@ class Hangman
     end
 
     def render
+        # Has a bug that if has two equals characteres this do not show the two
         system('clear')
         hashes = ("_ " * self.word.size).split(' ')
 

@@ -9,4 +9,12 @@ module Utils
 
         return vector.sample.chomp
     end
+
+    def validate_size(word, size)
+        if word.size > size
+            return false
+        end
+
+        return true
+    end
 end
