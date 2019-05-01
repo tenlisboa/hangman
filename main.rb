@@ -1,5 +1,5 @@
 require_relative 'lib/classes/hangman'
 
-teste = Hangman.new
+game = Hangman.new
 
-puts teste.play
+game.play
